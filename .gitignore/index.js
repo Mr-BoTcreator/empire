@@ -137,7 +137,7 @@ if(message.content.startsWith(prefix + "ban")) {
           }; 
           var fs = require('fs');
  
-let warns = JSON.parse(fs.readFileSync("./warns.json", "utf8"));
+let warns = JSON.parse(fs.readFileSync("warns.json", "utf8"));
  
 if (message.content.startsWith(prefix + "warn")){
  
