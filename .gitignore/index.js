@@ -2,7 +2,7 @@ onst Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-
+const token = process.env.TOKEN;
 
 var prefix = "!";
 
