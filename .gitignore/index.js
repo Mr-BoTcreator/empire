@@ -11,7 +11,7 @@ client.login(process.env.TOKEN);
   
 
        client.on('ready' , () => {
-	client.user.setActivity("L'Empire");
+	client.user.setActivity("Bot crée par Mr-BoT");
     console.log("Bot Ready !");
     
 });
