@@ -12,7 +12,7 @@ client.login(process.env.TOKEN);
 
        client.on('ready' , () => {
 	client.user.setActivity("L'Empire");
-	client.user.setActivity("L'Empire");       
+	
     console.log("Bot Ready !");
     
 });
