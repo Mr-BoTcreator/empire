@@ -10,11 +10,13 @@ client.login(process.env.TOKEN);
 
   
 
-       client.on('ready' , () => {
-	client.user.setActivity("L'Empire");
-	
-    console.log("Bot Ready !");
-    
+      client.on('ready' , () => {  
+setInterval(function() {
+client.user.setActivity("L'Empire");
+client.user.setActivity("Bot crée par Mr-BoT");
+client.user.setActivity("Le flood " , { type: "WATCHING"} );       
+},5000);
+console.log("Bot Ready !");
 });
 
 
