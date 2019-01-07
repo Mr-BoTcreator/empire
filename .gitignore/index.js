@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 
-const bot = new Discord.Client();
+
 
 const client = new Discord.Client();
 
 
 var prefix = "!";
-bot.login(process.env.TOKEN);
+
 
 client.login(process.env.TOKEN);
 
@@ -21,7 +21,7 @@ client.user.setActivity("Le flood " , { type: "WATCHING"} );
 console.log("Bot Ready !");
 });
 
-bot.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', member => {
       member.guild.channels.find("name" , "arrivals").send(`Salut ${member} :wave:
       Bienvenue dans L'Empire FB :tada:
       
