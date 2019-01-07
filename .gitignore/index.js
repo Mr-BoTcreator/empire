@@ -4,11 +4,11 @@ const client = new Discord.Client();
 
 
 var prefix = "!";
-
+bot.login(process.env.TOKEN);
 
 client.login(process.env.TOKEN);
 
-bot.login(process.env.TOKEN);
+
 
       client.on('ready' , () => {  
 setInterval(function() {
