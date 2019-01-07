@@ -23,7 +23,6 @@ console.log("Bot Ready !");
 
 bot.on('guildMemberAdd', member => {
       member.guild.channels.find("name" , "arrivals").send(`Salut ${member} :wave:
-
       Bienvenue dans L'Empire FB :tada:
       
        On vous invite à visiter le salon #auto-roles pour choisir vos rôle selon vos hôtels de ville ainsi choisir vos langues avec la reaction :flag_fr: si vous êtes Francais , ou :flag_lr: si vous êtes Anglais , et après , lire notre règlement juste ici #règlement ! :crossed_swords: 
