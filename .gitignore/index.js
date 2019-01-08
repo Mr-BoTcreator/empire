@@ -5,7 +5,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 
-var prefix = "!";
+var prefix = "+";
 
 
 client.login(process.env.TOKEN);
@@ -45,27 +45,21 @@ client.on('message' , message =>{
                .setColor('#D710A8')    
                .setTitle('Commande du bot des Regulator')
                .setDescription('Ces commandes ne peuvent etre utiliser que par les Regulator')
-               .addField("!warn [@tag] [raison]" , "Donner un avertissement à un utilisateur {L'avertissement s'enregistre sur la base de données}")
-               .addField("!clear [nombre de messages]" , "Effacer des messages")
-               .addField("!unmute [@tag]" ,"Le mebre parle")
-               .addField("!mute [@tag]" , "rend le membre muet dans le salon choisi")
-               .addField("!seewarns [@tag]" , "Vous permet de savoir le nombre d'avetissement d'un utilisateur")
-               .addField("!deletewarns [@tag] [numéro de l'avertissement]" ,"Supprimer un avertissement de la base de données")
-               .addField("!kick" , "Exclure un membre .  ") 
+               .addField("+warn [@tag] [raison]" , "Donner un avertissement à un utilisateur {L'avertissement s'enregistre sur la base de données}")
+               .addField("+clear [nombre de messages]" , "Effacer des messages")
+               .addField("+unmute [@tag]" ,"Le mebre parle")
+               .addField("+mute [@tag]" , "rend le membre muet dans le salon choisi")
+               .addField("+seewarns [@tag]" , "Vous permet de savoir le nombre d'avetissement d'un utilisateur")
+               .addField("+deletewarns [@tag] [numéro de l'avertissement]" ,"Supprimer un avertissement de la base de données")
+               .addField("+kick" , "Exclure un membre .  ") 
+               .addField("+ban" , "Bannir un membre .  ") 
+               .addField("+help" , "Affiche les commandes du bot  ")
+               .addField("+membres" , "Te permet de savoir le nombre de membres") 
                .setFooter('Toute personnes ayant essaye de utiliser ces commandes sera sanctionne par un mute')
                message.channel.send(help_embed);       
         console.log("Commande help demandée !");
-    if (message.content === prefix + "help"){
-            var help_embed = new Discord.RichEmbed()     
-                   .setColor('#0D4DCD')
-                   .setTitle('Commandes du bot des membres :')
-                     
-                   .addField("!help" , "Affiche les commandes du bot  ")
-                   .addField("!membres" , "Te permet de savoir le nombre de membres") 
-            
-                   message.channel.send(help_embed);       
-            console.log("Commande help demandée !");  
-}};
+     
+};
    if (message.content ===prefix + "membres"){
          var info_embed = new Discord.RichEmbed()
               .setColor('#AC1A32')
