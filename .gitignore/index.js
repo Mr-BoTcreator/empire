@@ -60,8 +60,9 @@ client.on('message' , message =>{
         console.log("Commande help demandée !");
      
 };
-      if (message.content === 'Bienvenue @L Empire#5882') {
-         message.reply('@everyone cv ')
+      if (message.content === 'prefixe') {
+         message.reply('Mon prefixe est [+]')
+            conseole.log("prefixe demandé")
        };
    if (message.content ===prefix + "membres"){
          var info_embed = new Discord.RichEmbed()
