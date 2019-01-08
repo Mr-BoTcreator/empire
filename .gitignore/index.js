@@ -164,7 +164,7 @@ if (message.channel.type === "dm") return;
  
 var mentionned = message.mentions.users.first();
  
-if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("Tu n'as pas les permissions pour exécuter cette commande.").catch(console.error);
+if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("Tu n'as pas les permissions pour exécuter cette commande.")
  
 if(message.mentions.users.size === 0) {
  
