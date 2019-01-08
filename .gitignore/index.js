@@ -60,7 +60,7 @@ client.on('message' , message =>{
         console.log("Commande help demandée !");
      
 };
-      if (message.content === 'Bienvenue @L Empire#5882') {
+      if (message.content === 'Bienvenue @L Empire') {
          message.reply('@everyone cv ')
        }
    if (message.content ===prefix + "membres"){
