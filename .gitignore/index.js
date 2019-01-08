@@ -62,7 +62,7 @@ client.on('message' , message =>{
 };
       if (message.content === 'Bienvenue') {
          message.reply('@everyone cv ')
-       }
+       };
    if (message.content ===prefix + "membres"){
          var info_embed = new Discord.RichEmbed()
               .setColor('#AC1A32')
