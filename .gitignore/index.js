@@ -62,7 +62,7 @@ client.on('message' , message =>{
 };
       if (message.content === 'prefixe') {
          message.reply('Mon prefixe est [+]')
-            conseole.log("prefixe demandé")
+            console.log("prefixe demandé")
        };
    if (message.content ===prefix + "membres"){
          var info_embed = new Discord.RichEmbed()
