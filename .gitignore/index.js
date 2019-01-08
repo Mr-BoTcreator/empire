@@ -111,7 +111,7 @@ if(message.content.startsWith(prefix + "ban")) {
              });
 }
  if(message.content.startsWith(prefix + "clear")) {
-       if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGE")) return message.channel.send("Tu n'as pas les permissions pour exécuter cette commande.");
+       if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.channel.send("Tu n'as pas les permissions pour exécuter cette commande.");
         
         let args = message.content.split(" ").slice(1);
 
