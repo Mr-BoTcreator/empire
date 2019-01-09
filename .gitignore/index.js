@@ -164,7 +164,7 @@ if (message.channel.type === "dm") return;
  
 var mentionned = message.mentions.users.first();
  
-if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("Tu n'as pas les permissions pour exécuter cette commande.")
+if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("Tu n'as pas les permissions pour exécuter cette commande.");
  
 if(message.mentions.users.size === 0) {
  
@@ -238,7 +238,7 @@ message.mentions.users.first().send(`Vous avez été averti  par **${message.aut
  
     } else {
  
-      message.channel.send("**:x: Vous n'avez pas la permission `Gérer le serveur` dans ce serveur**");
+      message.channel.send("Tu n'as pas les permissions pour exécuter cette commande.");
  
     }
  
@@ -252,7 +252,7 @@ message.mentions.users.first().send(`Vous avez été averti  par **${message.aut
  
 if (message.channel.type === "dm") return;
  
-if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("**:x: Vous n'avez pas la permission `Gérer le serveur` dans ce serveur**").catch(console.error);
+if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("Tu n'as pas les permissions pour exécuter cette commande.");
  
     const mentioned = message.mentions.users.first();
  
@@ -268,7 +268,7 @@ if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return m
  
             if (warns[message.guild.id][mentioned.id] === undefined||Object.keys(warns[message.guild.id][mentioned.id]).length === 0) {
  
-              message.channel.send("**"+mentioned.tag+"** n'a aucun warn :eyes:");
+              message.channel.send("**"+mentioned.tag+"** n'a recu aucun warn ");
  
               return;
  
@@ -276,7 +276,7 @@ if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return m
  
           } catch (err) {
  
-            message.channel.send("**"+mentioned.tag+"** n'a aucun warn :eyes:");
+            message.channel.send("**"+mentioned.tag+"** n'a recu aucun warn ");
  
             return;
  
@@ -284,7 +284,7 @@ if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return m
  
           let arr = [];
  
-          arr.push(`**${mentioned.tag}** a **`+Object.keys(warns[message.guild.id][mentioned.id]).length+"** warns :eyes:");
+          arr.push(`**${mentioned.tag}** a **`+Object.keys(warns[message.guild.id][mentioned.id]).length+"** warns ");
  
           for (var warn in warns[message.guild.id][mentioned.id]) {
  
@@ -327,7 +327,7 @@ if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return m
  
 if (message.channel.type === "dm") return;
  
-if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("**:x: Vous n'avez pas la permission `Gérer le serveur` dans ce serveur**").catch(console.error);
+if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return message.reply("Tu n'as pas les permissions pour exécuter cette commande.");
  
    const mentioned = message.mentions.users.first();
  
@@ -383,7 +383,7 @@ if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return m
  
             }
  
-            message.channel.send(`Le warn de **${mentioned.tag}**\': **${args[1]}** a été enlevé avec succès!`);
+            message.channel.send(`Le warn de **${mentioned.tag}**\': **${args[1]}** a été enlevé.`);
  
             return;
  
@@ -393,7 +393,7 @@ if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return m
  
             fs.writeFile("./warns.json", JSON.stringify(warns), (err) => {if (err) console.error(err);});
  
-            message.channel.send(`Les warns de **${mentioned.tag}** a été enlevé avec succès!`);
+            message.channel.send(`Les warns de **${mentioned.tag}** ont été enlevé .`);
  
             return;
  
@@ -417,7 +417,7 @@ if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return m
  
     } else {
  
-      message.channel.send("**:x: Vous n'avez pas la permission `Gérer le serveur` dans ce serveur**");
+      message.channel.send("Tu n'as pas les permissions pour exécuter cette commande.");
  
     }
  
