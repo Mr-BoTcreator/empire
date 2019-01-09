@@ -73,7 +73,7 @@ client.on('message' , message =>{
    }
 
    if(message.content.startsWith(prefix + "kick")) {
-       if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.channel.send("Tu n'as pas les permissions pour exécuter cette commande." )
+       if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.channel.send("Tu n'as pas les permissions pour exécuter cette commande." );
        
        if(message.mentions.users.size === 0) {
               return message.channel.send("Vous devez mentionner un utilisateur")
