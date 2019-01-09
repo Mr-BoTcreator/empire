@@ -313,7 +313,7 @@ if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return m
     } else {
  
       message.channel.send("Tu n'as pas les permissions pour exécuter cette commande.");
-");
+
  
     }
  
