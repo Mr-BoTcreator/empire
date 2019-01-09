@@ -312,7 +312,7 @@ if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return m
  
     } else {
  
-      message.channel.send("Tu n'as pas les permissions pour exécuter cette commande.
+      message.channel.send("Tu n'as pas les permissions pour exécuter cette commande.");
 ");
  
     }
@@ -351,7 +351,7 @@ if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return m
  
             } if (warns[message.guild.id][mentioned.id][arg2] === undefined) {
  
-              message.channel.send("**:x: Ce warn n'existe pas**");
+              message.channel.send(" Ce warn n'existe pas.");
  
               return;
  
