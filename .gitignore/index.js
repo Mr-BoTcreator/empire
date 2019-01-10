@@ -14,7 +14,6 @@ client.login(process.env.TOKEN1);
 
       client.on('ready' , () => {  
 setInterval(function() {
-client.user.setActivity("L'Empire");
 client.user.setActivity("Bot crée par Mr-BoT");
 client.user.setActivity("Le flood " , { type: "WATCHING"} );       
 },5000);
