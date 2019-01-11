@@ -5,7 +5,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 
-var prefix = "+";
+var prefix = "S!";
 
 
 client.login(process.env.TOKEN1);
@@ -36,25 +36,25 @@ client.on('message' , message =>{
     if (message.content === prefix + "help"){
         var help_embed = new Discord.RichEmbed()  
                .setColor('#D710A8')    
-               .setTitle('Commande du bot des Regulator certaines sont réservés au Director')
+               .setTitle('Commande du bot des Modérateur certaines sont réservés aux Adminstrateur')
                .setDescription('Ces commandes ne peuvent etre utiliser que par les Regulator')
-               .addField("+warn [@tag] [raison] :" , "Donner un avertissement à un utilisateur {L'avertissement s'enregistre sur la base de données}")
-               .addField("+clear [nombre de messages] : " , "Effacer des messages")
-               .addField("+unmute [@tag] :" ,"Le mebre parle")
-               .addField("+mute [@tag] :" , "rend le membre muet dans le salon choisi")
-               .addField("+seewarns [@tag] :" , "Vous permet de savoir le nombre d'avetissement d'un utilisateur")
-               .addField("+deletewarns [@tag] [numéro de l'avertissement] :" ,"Supprimer un avertissement de la base de données")
-               .addField("+kick :" , "Exclure un membre .  ") 
-               .addField("+ban :" , "Bannir un membre .  ") 
-               .addField("+help :" , "Affiche les commandes du bot  ")
-               .addField("+membres :" , "Te permet de savoir le nombre de membres") 
+               .addField("S!warn [@tag] [raison] :" , "Donner un avertissement à un utilisateur {L'avertissement s'enregistre sur la base de données}")
+               .addField("S!clear [nombre de messages] : " , "Effacer des messages")
+               .addField("S!unmute [@tag] :" ,"Le mebre parle")
+               .addField("S!mute [@tag] :" , "rend le membre muet dans le salon choisi")
+               .addField("S!seewarns [@tag] :" , "Vous permet de savoir le nombre d'avetissement d'un utilisateur")
+               .addField("S!deletewarns [@tag] [numéro de l'avertissement] :" ,"Supprimer un avertissement de la base de données")
+               .addField("S!kick :" , "Exclure un membre .  ") 
+               .addField("S!ban :" , "Bannir un membre .  ") 
+               .addField("S!help :" , "Affiche les commandes du bot  ")
+               .addField("S!membres :" , "Te permet de savoir le nombre de membres") 
                .setFooter('Toute personnes ayant essaye de utiliser ces commandes sera sanctionne par un mute')
                message.channel.send(help_embed);       
         console.log("Commande help demandée !");
      
 };
       if (message.content === 'prefixe') {
-         message.reply('Mon prefixe est [+]')
+         message.reply('Mon prefixe est [S!]')
             console.log("prefixe demandé")
        };
    if (message.content ===prefix + "membres"){
