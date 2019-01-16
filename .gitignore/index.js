@@ -218,7 +218,7 @@ if(message.mentions.users.size === 0) {
  
 message.delete();
  
-            message.channel.send('** | '+mentionned.tag+' à été averti**');
+            message.channel.send('** | '+mentionned.tag+' a été averti**');
  
 message.mentions.users.first().send(`Vous avez été averti  par **${message.author.username}**\n\n**Raison:** ` + args.slice(1).join(' '))
  
