@@ -65,7 +65,7 @@ client.on('message' , message =>{
      
 };
       if (message.content === 'prefixe') {
-         message.reply('Mon prefixe est [S!]')
+         message.reply('Mon prefixe est [+]')
             console.log("prefixe demandé")
        };
    if (message.content ===prefix + "membres"){
