@@ -125,7 +125,7 @@ if(message.content.startsWith(prefix + "ban")) {
         });
        }
        if(message.content.startsWith(prefix + "mute")) {
-              if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("Tu n'as pas les permissions pour exécuter cette commande.");
+              if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.channel.send("Tu n'as pas les permissions pour exécuter cette commande.");
        
               if(message.mentions.users.size === 0) {
                   return message.channel.send("Aucun utilisateur n'a été mentionné  ");
@@ -136,13 +136,13 @@ if(message.content.startsWith(prefix + "ban")) {
                   return message.channel.send("Je n'ai pas trouvé l'utilisateur ou il l'existe pas !");
               }
        
-              if(!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) return message.channel.send("Je n'ai pas la permission !");
+              if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.channel.send("Je n'ai pas la permission !");
               message.channel.overwritePermissions(mute, { SEND_MESSAGES: false}).then(member => {
                   message.channel.send(`${mute.user.username} est mute !`);
               })
           };     
           if(message.content.startsWith(prefix + "unmute")) {
-              if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("Tu n'as pas les permissions pour exécuter cette commande.");
+              if(!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.channel.send("Tu n'as pas les permissions pour exécuter cette commande.");
        
               if(message.mentions.users.size === 0) {
                   return message.channel.send('Vous devez mentionner un utilisateur !');
@@ -153,7 +153,7 @@ if(message.content.startsWith(prefix + "ban")) {
                   return message.channel.send("Je n'ai pas trouvé l'utilisateur ou il l'existe pas !");
               }
        
-              if(!message.guild.member(client.user).hasPermission("ADMINISTRATOR")) return message.channel.send("Je n'ai pas la permission !");
+              if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) return message.channel.send("Je n'ai pas la permission !");
               message.channel.overwritePermissions(mute, { SEND_MESSAGES: true}).then(member => {
                   message.channel.send(`${mute.user.username} peut maintenant parler  !`);
               })
