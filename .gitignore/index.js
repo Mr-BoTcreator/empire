@@ -21,7 +21,7 @@ console.log("Bot Ready !");
 });
 
 client.on('guildMemberAdd', member => {
-      member.guild.channels.find("name" , "arrivals").send(`
+      member.guild.channels.find("name" , "staff-bot").send(`
 Salut  ${member} :wave:
 
 Bienvenue dans L'Empire  :tada:
