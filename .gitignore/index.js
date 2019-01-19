@@ -21,7 +21,7 @@ console.log("Bot Ready !");
 });
 
 client.on('guildMemberAdd' , member => {
-      member.guild.channels.find(channel => channel.name === "welcome-channel").send(`Salut {user} :wave:
+      member.guild.channels.find(channel => channel.name === "arrivals").send(`Salut {user} :wave:
 
 Bienvenue dans L'Empire  :tada:
 
