@@ -20,7 +20,8 @@ client.user.setActivity("Le flood " , { type: "WATCHING"} );
 console.log("Bot Ready !");
 });
 
-member.guild.channels.find(chnl => chnl.name === "welcome-channel").send(`Salut {user} :wave:
+client.on('guildMemberAdd' , member => {
+      member.guild.channels.find(channel => channel.name === "welcome-channel").send(`Salut {user} :wave:
 
 Bienvenue dans L'Empire  :tada:
 
@@ -35,6 +36,8 @@ Welcome to The L'Empire  :tada:
 We invite you to visit the salon #auto-roles to choose your role according to your city halls so choose your languages ​​with the reaction :flag_fr: if you are French, or :flag_lr: if you are English, and after , reading our rules right here #settlement  :crossed_swords:
 
 Good game for you ! :clashofclan:`);
+      console.log(`${member} has joined the server ${member.guild.name}`);
+});
 
 client.on('message' , message =>{
     if (message.content === prefix + "help"){
