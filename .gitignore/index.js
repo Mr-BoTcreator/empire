@@ -27,7 +27,7 @@ client.on('guildMemberAdd' , member => {
 
  On vous invite à visiter le salon #auto-roles pour choisir vos rôle selon vos hôtels de ville ainsi choisir vos langues avec la reaction :flag_fr: si vous êtes **Francais** , ou :flag_lr: si vous êtes **Anglais** , et après , lire notre règlement juste ici #règlement ! :crossed_swords: 
 
-**Bon jeu à toi !** :clashofclan:
+**Bon jeu à toi !** <:clashofclan:491974582094397450>
 ------------------------------------------------------------
 **Hi**
 
@@ -35,7 +35,7 @@ client.on('guildMemberAdd' , member => {
 
 We invite you to visit the salon #auto-roles to choose your role according to your city halls so choose your languages ​​with the reaction :flag_fr: if you are **French**, or :flag_lr: if you are **English**, and after , reading our rules right here #settlement  :crossed_swords:
 
-**Good game for you !** :clashofclan:`);
+**Good game for you !** <:clashofclan:491974582094397450>`);
       console.log(`${member} has joined the server ${member.guild.name}`);
 });
 
